@@ -1,0 +1,343 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("./assets/fonts/Dancing_Script/DancingScript-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.wrapper {
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+.hidden {
+  display: none !important;
+}
+
+/*  HEADER  */
+
+.wrapper__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  padding: 0 10px;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  color: rgb(182, 182, 182);
+  font-size: 6.5rem;
+  /* display: block; */
+  position: relative;
+  margin-bottom: 10px;
+}
+.logo::before {
+  content: "| швейное ателье";
+  width: 100%;
+  position: absolute;
+  font-size: 1.4rem;
+  color: sandybrown;
+  bottom: -35px;
+  left: 50px;
+}
+.header__info {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.header__info .info-phone {
+  padding-right: 20px;
+  background: url("./assets/images/icon_phone.png") right 3px no-repeat;
+  padding-bottom: 20px;
+}
+
+.header__info .info-map {
+  padding-right: 20px;
+  background: url("./assets/images/icon_map_point.png") right no-repeat;
+}
+
+.header__info .info-phone a,
+.header__info .info-map a {
+  border-bottom: 1px solid black;
+}
+
+/*  MAIN CONTENT */
+
+.main__info {
+  position: relative;
+  width: 100%;
+  height: 530px;
+  z-index: 1;
+}
+.main__info img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  display: block;
+  /* object-position: center bottom; */
+  filter: blur(1px);
+}
+.main__info .info-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: rgba(244, 205, 165, 0.74);
+  width: 45%;
+  height: 100%;
+}
+.main__info .info-description h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  padding: 10px;
+  word-spacing: 3px;
+}
+.main__info .info-description p {
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 10px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+.main__info .info-description a {
+  color: rgb(0, 89, 255);
+}
+
+.wrapper__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 10px; */
+}
+.services {
+  display: flex;
+  flex-direction: column;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.srvice__title {
+  text-align: center;
+  font-size: 2.2rem;
+  padding-bottom: 10px;
+}
+.service__description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.service:nth-child(2n) .service__description {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.service__text {
+  text-align: justify;
+  width: 50%;
+  font-size: 2rem;
+}
+.service__img {
+  display: block;
+  width: 35%;
+}
+.service__img img {
+  width: 100%;
+  height: 100%;
+}
+.order-service {
+  display: flex;
+  /* height: 400px; */
+  padding: 5px;
+  margin-bottom: 35px;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.order-service__title {
+  text-align: center;
+}
+.order-service form textarea {
+  height: 165px;
+  resize: none;
+  padding: 10px;
+}
+.order-service form input[type="text"] {
+  padding: 3px;
+}
+.order-service form button {
+  margin-top: 10px;
+  width: 100%;
+  height: 35px;
+  background: white;
+  border: 1px solid rgb(136, 136, 136);
+  cursor: pointer;
+  display: block;
+  font-size: 2.2rem;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.order-service form button:hover {
+  background: rgba(122, 122, 122, 0.356);
+  color: white;
+  transition: all 0.3s ease;
+}
+.order-service form .selectService {
+  display: block;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(177, 177, 177);
+}
+.order-service form .clothes,
+.order-service form .linens,
+.order-service form .curtains {
+  display: block;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(177, 177, 177);
+}
+
+.load-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#atelier-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  LOGIN  */
+
+.auth {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.auth__title {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 34px;
+  font-weight: 400;
+}
+.auth__form {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.auth__form input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 7px;
+  color: rgb(68, 68, 68);
+  border: 1px solid rgb(177, 177, 177);
+}
+.auth__form button {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 30px;
+  font-size: 22px;
+  cursor: pointer;
+  border: 1px solid rgb(177, 177, 177);
+}
+
+/* admin panel */
+.orders {
+  /* margin: 20px; */
+  width: 90%;
+  table-layout: fixed;
+  margin: 0 auto;
+  padding: 0px;
+}
+.list-order {
+  text-align: center;
+}
+td {
+  height: 65px;
+  /* width: 50px; */
+  /* color: blue; */
+  /* display: table; */
+  /* width: 10%; */
+  /* display: inline-block !important; */
+}
+.id-order {
+  width: 5%;
+}
+.description-order {
+  /* height: 65px; */
+  /* display: table-row; */
+  /* width: 50px; */
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.activated-order {
+  text-align: center;
+}
+tr button {
+  height: 35px;
+  width: 110px;
+  background: whitesmoke;
+  border: 1px solid lightseagreen;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn-order-confirmed.unActive {
+  /* background-color: red; */
+  cursor: default;
+  position: relative;
+}
+.btn-order-confirmed.unActive::before {
+  /* background-color: red; */
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.562);
+}
