@@ -1,76 +1,8 @@
-// const { Client } = require('pg');
-// const client = new Client({
-//     user: 'postgres',
-//     password: '319846319846',
-//     host: 'localhost',
-//     port: 5432,
-//     database: 'course-project'
-// });
-
-// client.connect()
-//     .then(() => console.log("Connected successfuly"))
-//     .catch(e => console.log(e));
-
-// const bcrypt = require('bcrypt');
-// const saltRounds = 10;
-// const myPlaintextPassword = '123456789';
-
-
-
-
-// client
-//     .query(`INSERT INTO customers(name,phone,email,description,img) 
-//             VALUES ('1','1','1','1','./bg-reverse.jpg')`)
-//     .then(res => console.log('wp'))
-//     .catch(e => console.error(e.stack))
-
-// client
-//     .query(`INSERT INTO test(img,img1) 
-//             VALUES ('bg-reverse.jpg','./bg-reverse.jpg')`)
-//     .then(res => console.log('wp'))
-//     .catch(e => console.error(e.stack))
-// client
-//     .query('SELECT * FROM test')
-//     .then(res => console.log(res.rows[0]))
-//     .catch(e => console.error(e.stack))
-// bcrypt.hash(myPlaintextPassword, saltRounds).then(function (hash) {
-
-//     client.query(`INSERT INTO users(login,password) VALUES ('admin@a.ru','${hash}')`);
-// });
-
-// const { Client } = require('pg');
-// const client = new Client({
-//     user: 'postgres',
-//     password: '319846319846',
-//     host: 'localhost',
-//     port: 5432
-// });
-// client.query('CREATE database atelier')
-//     .then(res => console.log('success'))
-//     .catch(e => console.error(e.stack))
-
-// var pgtools = require('pgtools');
-// pgtools.createdb({
-//     user: 'postgres',
-//     password: '319846319846',
-//     host: 'localhost',
-//     port: 5432
-// }, 'atelier', function (err, res) {
-//     if (err) {
-//         console.error(err);
-//         process.exit(-1);
-//     }
-//     console.log('success create db')
-// });
-
-
-
-
 function creatDatabase() {
     var pgtools = require('pgtools');
     pgtools.createdb({
         user: 'postgres',
-        password: '319846319846',
+        password: '123456789',
         host: 'localhost',
         port: 5432
     }, 'atelier', function (err, res) {
@@ -87,7 +19,7 @@ function createTable() {
     const { Client } = require('pg');
     const client = new Client({
         user: 'postgres',
-        password: '319846319846',
+        password: '123456789',
         host: 'localhost',
         port: 5432,
         database: 'atelier'
@@ -259,7 +191,6 @@ function createTable() {
     `)
         .then(res => console.log('user fields added successfully'))
         .catch(e => console.error(e.stack))
-        .finally(client.end())
 }
 
 creatDatabase();
